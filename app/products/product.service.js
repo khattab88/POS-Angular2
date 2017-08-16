@@ -25,10 +25,11 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
             }],
         execute: function() {
             ProductService = (function () {
+                //'http://localhost:56992/api/products';
                 //'app/api/products.json';
                 function ProductService(_http) {
                     this._http = _http;
-                    this._productUrl = 'http://localhost:56992/api/products';
+                    this._productUrl = 'app/api/products.json';
                 }
                 ProductService.prototype.getProducts = function () {
                     return this._http.get(this._productUrl)
